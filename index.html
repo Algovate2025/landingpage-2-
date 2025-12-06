@@ -454,6 +454,58 @@
             transform: translateX(-50%);
         }
 
+        /* Trades Caption */
+        .trades-caption {
+            text-align: center;
+            padding: 2rem 1rem 0;
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        .trades-caption-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(34, 197, 94, 0.12);
+            border: 1px solid rgba(34, 197, 94, 0.25);
+            padding: 0.35rem 0.9rem;
+            border-radius: 50px;
+            margin-bottom: 0.75rem;
+        }
+
+        .trades-caption-badge .pulse-dot {
+            width: 7px;
+            height: 7px;
+            background: #22C55E;
+            border-radius: 50%;
+            animation: pulseDot 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulseDot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.2); }
+        }
+
+        .trades-caption-badge span {
+            color: #22C55E;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .trades-caption p {
+            color: rgba(255,255,255,0.7);
+            font-size: 1rem;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        .trades-caption p strong {
+            color: #D4AF37;
+            font-weight: 600;
+        }
+
         /* Feature Cards - Desktop Only */
         .feature-cards-container {
             display: none;
@@ -818,6 +870,15 @@
                         </div>
                     </div>
                     <div class="phone-button"></div>
+                </div>
+
+                <!-- Trades Erklärung -->
+                <div class="trades-caption">
+                    <div class="trades-caption-badge">
+                        <div class="pulse-dot"></div>
+                        <span>Echte Ergebnisse</span>
+                    </div>
+                    <p>Echte Trades unserer <strong>KI</strong> – vollautomatisch und profitabel, während du schläfst.</p>
                 </div>
             </div>
 
