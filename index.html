@@ -3,13 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>Trade mit bis zu €200.000 Fremdkapital – KI übernimmt</title>
-    <meta name="description" content="Handle mit bis zu €200.000 Fremdkapital ohne eigenes Risiko. Unsere KI tradet vollautomatisch für dich.">
+    <title>Private Access Platform</title>
+    <meta name="description" content="Request access to a private digital platform. Limited availability.">
 
     <!-- Modern Tech Fonts - Optimized Loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1423927573068330');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1423927573068330&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 
     <style>
         * {
@@ -800,6 +818,7 @@
             }
         }
     </style>
+
 </head>
 <body>
     <!-- Header -->
@@ -964,5 +983,44 @@
         }
     })();
     </script>
+<script>
+(function () {
+  // Track CTA clicks as "Lead" and then redirect after a short delay so the event can be sent.
+  function wireMetaLeadTracking() {
+    if (typeof fbq !== 'function') return;
+
+    var ctaLinks = document.querySelectorAll('a[href^="https://taap.it/"], a[href^="http://taap.it/"]');
+    if (!ctaLinks || !ctaLinks.length) return;
+
+    ctaLinks.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        try {
+          // Avoid double-firing if user clicks multiple times quickly
+          if (link.dataset.fbpTracked === '1') return;
+          link.dataset.fbpTracked = '1';
+
+          e.preventDefault();
+
+          fbq('track', 'Lead');
+
+          var url = link.href;
+          setTimeout(function () {
+            window.location.href = url;
+          }, 300);
+        } catch (err) {
+          // Fallback: still navigate
+          window.location.href = link.href;
+        }
+      }, { passive: false });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', wireMetaLeadTracking);
+  } else {
+    wireMetaLeadTracking();
+  }
+})();
+</script>
 </body>
 </html>
